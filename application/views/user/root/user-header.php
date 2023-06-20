@@ -17,13 +17,30 @@
 
 body {
   font-family: "Oswald", sans-serif;
-  background-color: #ad0919;
+  background-color: #363636;
 }
+
+/* Button Ke atas */
+#btn-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #ff3737;
+  display: none;
+  z-index: 99;
+  border: none;
+}
+
+#btn-to-top i {
+  color: whitesmoke;
+}
+/* Button Ke atas */
+
 
 header {
   width: 100%;
   height: 440px;
-  background-color: #FF3737;
+  background-color: #B22222;
   background-image: url(http://localhost/E-BOLA/assets/img/gbk.jpg);
   background-size: cover;
   background-position: center;
@@ -38,7 +55,7 @@ header {
   align-items: center;
   padding: 0 64px;
   height: 80px;
-  background: #FF3737;
+  background: #B22222;
 }
 
     /* CSS Laporan Section */
@@ -121,6 +138,48 @@ header {
       }
     }
     
+    @media (max-width: 720px) {
+  .nav-container {
+    padding: 0 32px;
+  }
+  .nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-container {
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    flex-direction: column;
+    padding: 48px;
+    width: 240px;
+    height: calc(100vh - 5rem);
+    background: #ff3737;
+    transition: 0.5s ease;
+  }
+
+  /* show class will make .menu-container slides in */
+  .show {
+    left: 0;
+  }
+  .menu-item {
+    margin: 16px 0;
+    font-size: 16px;
+  }
+}
+
+.menu-link {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.menu-link:hover {
+  color: #363636;
+}
+/* Navbar Section End */
+
+    
     .dropdown-nav-menu {
       width: 140px;
       position: absolute;
@@ -141,7 +200,7 @@ header {
       display: none;
     }
     .dropdown-nav-item:hover {
-      color: turquoise;
+      color: #363636;
     }
   </style>
 </head>
@@ -156,7 +215,10 @@ header {
           <a class="menu-link" href="<?php echo base_url('user/Home'); ?>">Home</a>
         </li>
         <li class="menu-item">
-          <a class="menu-link" href="<?php echo base_url('user/Pembayaran'); ?>">Pesan Tiket</a>
+          <a class="menu-link" href="<?php echo base_url('user/PesanTiket'); ?>">Pesan Tiket</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" href="<?php echo base_url('user/Pembayaran'); ?>">Detail Pemesanan</a>
         </li>
         <li class="menu-item dropdown-menu-item" style="position: relative;">
           <a class="menu-link" href="#"><?php echo $this->session->userdata('nama_user'); ?> <i class="fa-solid fa-caret-down"></i></i><!-- Nama Dipanggil dari database -->

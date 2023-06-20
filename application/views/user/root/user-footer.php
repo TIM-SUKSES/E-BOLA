@@ -1,5 +1,5 @@
 <footer class="bg-light text-center text-lg-start">
-    <div class="text-white text-center p-3" style="background-color: #FF3737;">
+    <div class="text-white text-center p-3" style="background-color: #B22222;">
       Copyright © 2023 E-BOLA All Rights Reserved
     </div>
   </footer>

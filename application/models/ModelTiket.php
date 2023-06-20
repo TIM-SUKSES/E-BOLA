@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class ModelTIket extends CI_Model
+class ModelTiket extends CI_Model
 {
     
     public function simpanTiket($data = null)
@@ -37,7 +37,7 @@ class ModelTIket extends CI_Model
         $this->db->insert('tiket', $data);
     }
     
-    public function editTiket()
+    public function editTiket($id_tiket)
     {
         $config['upload_path']          = 'assets/img';
         $config['allowed_types']        = 'jpg|png|jpeg';
@@ -47,8 +47,10 @@ class ModelTIket extends CI_Model
 
         if ($this->upload->do_upload("foto")) {
             $imageData = $this->upload->data();
-            $fileName = $imageData['file_name']; 
+            $fileName = $imageData['file_name'];
+            unlink('assets/img/'. $this->input->post('foto_lama', true)); 
         } else {
+            $filename = htmlspecialchars($this->input->post('foto_lama', true));
             //flashdata massage
             $x = $this->upload->display_errors();
             $this->session->set_flashdata(
@@ -57,7 +59,7 @@ class ModelTIket extends CI_Model
 			           <strong> ' . $x . ' </strong> 
                  </div>'
             );
-            redirect('admin/DataTiket/ubahTiket');
+            redirect('admin/DataTiket/ubahTiket/'. $id_tiket);
         }
 
         $data = [
@@ -67,9 +69,11 @@ class ModelTIket extends CI_Model
             'jumlah' => htmlspecialchars($this->input->post('jumlah', true)),
         ];
 
-        $this->db->where('id_tiket', $this->input->post('id_tiket'));
+        $this->db->where('id_tiket', $id_tiket);
         $this->db->update('tiket', $data);
     }
+
+    
 }
 
 

@@ -18,6 +18,19 @@ class ModelUser extends CI_Model {
           ];
           $this->db->insert('user', $data);
     }
+
+    public function updateUser()
+    {
+        $data = [
+            'nama_user' => $this->input->post('nama_user', true),
+            'email' => $this->input->post('email', true),
+            'password' => password_hash($this->input->post('password', true), PASSWORD_DEFAULT),
+            'role' => $this->input->post('role', true)
+          ];
+          $this->db->where('id_user', $this->input->post('id_user'));
+          $this->db->insert('user', $data);
+    }
+        
 }
 
 

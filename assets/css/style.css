@@ -27,21 +27,6 @@ header {
   background-position: center;
 }
 
-/* Button Ke atas */
-#btn-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background-color: #00C39A;
-  display: none;
-  z-index: 99;
-  border: none;
-}
-
-#btn-to-top i {
-  color: whitesmoke;
-}
-/* Button Ke atas */
 
 /* Section Login Start */
 .section-login {
@@ -334,47 +319,6 @@ header {
   margin: 12px 0px 0px 32px;
   font-size: 18px;
 }
-
-@media (max-width: 720px) {
-  .nav-container {
-    padding: 0 32px;
-  }
-  .nav-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .menu-container {
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    flex-direction: column;
-    padding: 48px;
-    width: 240px;
-    height: calc(100vh - 5rem);
-    background: #434343;
-    transition: 0.5s ease;
-  }
-
-  /* show class will make .menu-container slides in */
-  .show {
-    left: 0;
-  }
-  .menu-item {
-    margin: 16px 0;
-    font-size: 16px;
-  }
-}
-
-.menu-link {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-.menu-link:hover {
-  color: turquoise;
-}
-/* Navbar Section End */
 
 /* Responsive sm */
 @media (min-width: 640px) {

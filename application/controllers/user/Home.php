@@ -18,6 +18,19 @@ class Home extends CI_Controller{
     $this->load->view('user/root/user-footer', $data);
   }
 
+  public function beliTiket()
+  {
+    $this->load->model('ModelUser');
+    $this->ModelUser->update_status_user();
+    if ($this->db->affected_rows() > 0) {
+      $result = ['success' => true];
+    }else {
+      $result = ['success' => false];
+    }
+
+    echo json_encode($result);
+  }
+
 }
 
 ?>

@@ -33,6 +33,18 @@ class DataUser extends CI_Controller{
       $this->load->view('admin/templates/admin-footer');
   }
 
+  public function updateUser(){
+    $this->ModelUser->update();
+    if ($this->db->affected_rows() > 0){
+        $this->session->set_flashdata('message', '
+        <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h4><i class="icon fa fa-warning"></i> Data Telah diupdate! </h4>
+        </div>');
+        redirect('admin/DataUser/index');
+    }
+  }
+
 }
 
 ?>

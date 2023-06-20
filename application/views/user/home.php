@@ -7,7 +7,7 @@
 <!-- Features Section Start -->
 <section id="features" class="section-features">
   <div class="features-container">
-    <h1>SELAMAT DATANG, <?php echo $this->session->userdata('nama_user'); ?></h1>
+    <h1>Selamat Datang <?php echo $this->session->userdata('nama_user'); ?></h1>
     <hr>
     <div class="absen-features">
       <div class="grid row align-items-center absen-content">
