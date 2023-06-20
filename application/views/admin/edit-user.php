@@ -10,37 +10,29 @@
     <!-- header -->
     <div class="box-body">
       <form action="<?php echo site_url('admin/DataUser/updateUser'); ?>" method="post" enctype="multipart/form-data">
-      <input type="hidden" name="id_user" value="<?php echo $row->id_tiket ?>">  
+      <input type="hidden" name="id_user" value="<?php echo $row->id_user ?>">  
       <table id="table" width="30%">
           <tr>
             <td>
             <div class="form-group">
-                <label for="nama_tiket">Nama Tiket <span class="text-danger">*</span></label>
-                <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Masukkan Nama Tiket" required>
+                <label for="nama_user">NAMA USER <span class="text-danger">*</span></label>
+                <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Masukkan Nama User" value="<?= $row->nama_user; ?>">
               </div>
             </td>
           </tr> 
           <tr> 
             <td>
               <div class="form-group">
-                <label for="foto">Gambar Tiket <span class="text-danger">*</span></label>
-                <input type="file" name="foto" id="foto" class="form-control" required>
+                <label for="email">EMAIL <span class="text-danger">*</span></label>
+                <input type="email" name="email" id="email" class="form-control" value="<?= $row->email; ?>">
               </div>
             </td>
           </tr>
           <tr> 
             <td>
               <div class="form-group">
-                <label for="harga">Harga <span class="text-danger">*</span></label>
-                <input type="number" name="harga" id="harga"  class="form-control" placeholder="Masukkan Harga Tiket" required>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-            <div class="form-group">
-                <label for="jumlah">Jumlah Tiket <span class="text-danger">*</span></label>
-                <input type="number" name="jumlah" id="jumlah" class="form-control" placeholder="Masukkan Jumlah Tiket" required>
+                <label for="password">PASSWORD <span class="text-danger">*</span></label>
+                <input type="password" name="password" id="password"  class="form-control" placeholder="Masukkan Password" required">
               </div>
             </td>
           </tr>

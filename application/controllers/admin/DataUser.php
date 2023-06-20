@@ -29,7 +29,7 @@ class DataUser extends CI_Controller{
       $this->load->view('admin/templates/admin-header', $data);
       $this->load->view('admin/templates/admin-topbar');
       $this->load->view('admin/templates/admin-sidebar');
-      $this->load->view('admin/edit-warga', $data);
+      $this->load->view('admin/edit-user', $data);
       $this->load->view('admin/templates/admin-footer');
   }
 
