@@ -5,7 +5,7 @@
 <!-- Button To Top End -->
 
 
-<!-- Jadwal Section Start -->
+
 <section id="jadwal" class="section-jadwal">
   <div class="jadwal-container">
     <h1>DAFTAR TIKET BOLA</h1>
@@ -18,7 +18,7 @@
       foreach($tabel as $table) : ?>
       
       <div class="card-jadwal">
-        <h3><?php echo $table->nama_tiket ?></h3> <!-- Isi dengan database  -->
+        <h3><?php echo $table->nama_tiket ?></h3>
         <hr>
         <img src="<?= base_url('assets/img/') . $table->foto; ?>" alt="" class="img-thumbnail">
         <h5 class="text-center">HARGA : Rp. <?php echo $table->harga; ?></h5>
@@ -43,4 +43,3 @@
     </div>
   </div>
 </section>
-<!-- Jadwal Section End -->

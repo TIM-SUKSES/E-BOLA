@@ -4,7 +4,7 @@
 </button>
 <!-- Button To Top End -->
 
-<!-- Features Section Start -->
+
 <section id="features" class="section-features">
   <div class="features-container">
     <h1>Selamat Datang <?php echo $this->session->userdata('nama_user'); ?></h1>
@@ -20,4 +20,3 @@
     </div>
   </div>
 </section>
-<!-- Features Section End -->

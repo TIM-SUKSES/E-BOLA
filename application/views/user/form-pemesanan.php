@@ -4,12 +4,12 @@
 </button>
 <!-- Button To Top End -->
 
-<!-- Laporan Section Start -->
+
 <section id="laporan" class="section-laporan" style="padding-bottom: 46px;">
   <div class="laporan-container">
     <h1>PESAN TIKET</h1>
     <hr>
-    <div class="card-form"> <!-- Untuk Styling Form css terdapat di header -->
+    <div class="card-form">
     <?= $this->session->flashdata('message2'); ?>
       <div class="report-container">
         <div class="form-container">
@@ -41,4 +41,3 @@
     </div>
   </div>
 </section>
-<!-- Laporan Section End -->

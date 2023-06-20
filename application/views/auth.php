@@ -15,7 +15,7 @@
 </section>
 <!-- Login Section End -->
 
-<!-- Modal Login Petugas -->
+<!-- Modal Login -->
 <div class="modal fade" id="modal-login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
   aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-auth">
