@@ -74,6 +74,20 @@ class DataTiket extends CI_Controller{
     }
   }
 
+
+  public function hapus($id_tiket)
+{
+  $this->db->delete('tiket', ['id_tiket' => $id_tiket]);
+  if ($this->db->affected_rows() > 0){
+      $this->session->set_flashdata('message', '
+      <div class="alert alert-warning alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h4><i class="icon fa fa-warning"></i> Data Telah Terhapus! </h4>
+      </div>');
+      redirect('admin/DataTiket/index');
+  }
+}
+
 }
 
 ?>

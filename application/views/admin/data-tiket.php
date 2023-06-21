@@ -7,7 +7,7 @@
                 <a href="<?php echo site_url('admin/DataTiket/tambahTiket'); ?>" class="btn bg-red"><i class="fa fa-plus-circle"> Tambah Penjualan Tiket </i></a>
             </div>
             <!-- /.box-header -->
-            <?= $this->session->flashdata('message2'); ?>
+            <?= $this->session->flashdata('message'); ?>
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>

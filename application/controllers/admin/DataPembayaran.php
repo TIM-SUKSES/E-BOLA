@@ -47,7 +47,7 @@ class DataPembayaran extends CI_Controller{
 
   $this->db->where('id_pembayaran', $id);
   $this->db->update('pembayaran', $data);
-  redirect('admin/DataPembayaran');
+  redirect('admin/DataPembayaran/editPembayaran/'. $id);
   }
 
 

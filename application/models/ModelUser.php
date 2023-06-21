@@ -19,7 +19,7 @@ class ModelUser extends CI_Model {
           $this->db->insert('user', $data);
     }
 
-    public function updateUser()
+    public function updatePengguna()
     {
         $data = [
             'nama_user' => $this->input->post('nama_user', true),
@@ -28,7 +28,7 @@ class ModelUser extends CI_Model {
             'role' => $this->input->post('role', true)
           ];
           $this->db->where('id_user', $this->input->post('id_user'));
-          $this->db->insert('user', $data);
+          $this->db->update('user', $data);
     }
         
 }
