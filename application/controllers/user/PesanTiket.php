@@ -32,9 +32,9 @@ class PesanTiket extends CI_Controller{
 
   public function beliTiket()
   {
-    $this->load->model('ModelTiket');
+    // $this->load->model('ModelTiket');
     $this->load->model('ModelPembayaran');
-    $this->ModelTiket->updateStock();
+    // $this->ModelTiket->updateStock();
     $this->ModelPembayaran->inputPembayaran();
     if($this->db->affected_rows() > 0)
     {

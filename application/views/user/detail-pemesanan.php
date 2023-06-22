@@ -1,7 +1,8 @@
+<!-- Button Phone Number Start -->
 <button type="button" class="btn btn-lg rounded-circle shadow" id="btn-to-top">
-  <i class="fa-solid fa-arrow-up"></i>
+  <a href="https://wa.me/+6281294684656" target="_blank"><i class="fa fa-phone"></i></a>
 </button>
-<!-- Button To Top End -->
+<!-- Button Phone Number End -->
 
 
 <section id="ubahpassword" class="section-absen" style="padding-bottom: 46px;">
