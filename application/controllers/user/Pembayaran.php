@@ -13,7 +13,7 @@ class Pembayaran extends CI_Controller{
   public function index()
   {
     $data['title'] = 'Detail Pemesanan';
-    $data['tabel'] = $this->db->get_where('pembayaran',['nama_user' => $this->session->userdata('nama_user')])->result();
+    $data['tabel'] = $this->db->get_where('pembayaran',['id_user' => $this->session->userdata('id_user')])->result();
     $this->load->view('user/root/user-header', $data);
     $this->load->view('user/detail-pemesanan');
     $this->load->view('user/root/user-footer', $data);

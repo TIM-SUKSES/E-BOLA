@@ -29,6 +29,7 @@ class ModelPembayaran extends CI_Model
 
         date_default_timezone_set("Asia/Jakarta");
         $data = [
+            'id_user' => htmlspecialchars($this->input->post('id_user', true)),
             'nama_user' => htmlspecialchars($this->input->post('nama_user', true)),
             'nama_tiket' => htmlspecialchars($this->input->post('nama_tiket', true)),
             'metode_pembayaran' => htmlspecialchars($this->input->post('metode_pembayaran', true)),

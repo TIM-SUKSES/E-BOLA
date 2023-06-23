@@ -17,6 +17,7 @@
           <hr>
           <form action="<?php echo site_url('user/Pembayaran/simpanPembayaran'); ?>" method="post" enctype="multipart/form-data" >
             <input type="hidden" value="<?php echo $id_tiket ?>">
+            <input type="hidden" id="id_user" name="id_user" value="<?php echo $this->session->userdata('id_user'); ?>">
             <input type="hidden" id="nama_user" name="nama_user" value="<?php echo $this->session->userdata('nama_user'); ?>">
             <input type="hidden" id="nama_tiket" name="nama_tiket" value="<?php echo $row->nama_tiket ?>">
             <input type="hidden" id="harga" name="harga" value="<?php echo $row->harga ?>">
